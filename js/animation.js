@@ -30,5 +30,11 @@ $('textarea').bind('keyup keydown', function() {
     };
 });
 $('#tweet-submit').click(function(){
-  $('#stream').prepend('<div class="tweet"><div class="content"><img class="avatar" src="img/alagoon.jpg" /><strong class="fullname">Chris ONeill </strong><span class="username">@coneill</span><p class="tweet-text">' + $('.tweet-compose').val() + '</p><div class="tweet-actions"><ul><li><span class="icon action-reply"></span> Reply</li><li><span class="icon action-retweet"></span> Retweet</li><li><span class="icon action-favorite"></span> Favorite</li><li><span class="icon action-more"></span> More</li></ul></div></div></div>')
+  $('#stream').prepend('<div class="tweet"><div class="content"><img class="avatar" src="img/alagoon.jpg" /><strong class="fullname">Chris ONeill </strong><span class="username">@coneill</span><p class="tweet-text">' + $('.tweet-compose').val() + '</p><div class="tweet-actions"><ul> <li> <span class="icon action-reply"> </span> Reply</li>\n <li> <span class="icon action-retweet"> </span> Retweet</li>\n <li> <span class="icon action-favorite"> </span> Favorite</li>\n <li> <span class="icon action-more"> </span> More</li>\n </ul> </div> </div> </div>')
 });
+
+$('#main').hover(function() {
+  $('.tweet-actions').show();
+  }, function() {
+  $('.tweet-actions').hide();
+  });
